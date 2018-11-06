@@ -7,6 +7,9 @@
 
   socket.on('disconnect', function(){
     console.log('disconnected');
+    setTimeout(function(){
+      socket.open();
+    }, 1000)
   });
 
   socket.on('message', function(msg, ack){
